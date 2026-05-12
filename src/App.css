@@ -1,6 +1,4 @@
-/* src/App.css */
 
-/* Main background - subtle dark theme */
 body {
   background: #121212;
   color: #e0e0e0;
@@ -11,7 +9,7 @@ body {
   margin: 0;
 }
 
-/* The container "card" */
+
 .container {
   background: #1e1e1e;
   padding: 30px;
@@ -26,11 +24,11 @@ body {
 h1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #bb86fc; /* Dreamy purple accent */
+  color: #bb86fc; 
   letter-spacing: 1px;
 }
 
-/* Input styling */
+
 input {
   width: 70%;
   padding: 12px;
@@ -41,12 +39,12 @@ input {
   outline: none;
 }
 
-/* Button styling */
+
 button {
   width: 25%;
   padding: 12px;
   border: none;
-  background: #03dac6; /* Teal accent */
+  background: #03dac6; 
   color: #000;
   font-weight: bold;
   border-radius: 0 8px 8px 0;
@@ -58,7 +56,7 @@ button:hover {
   background: #01b0a1;
 }
 
-/* Task list styling */
+
 ul {
   list-style: none;
   padding: 0;
@@ -71,7 +69,7 @@ li {
   padding: 12px;
   border-radius: 8px;
   text-align: left;
-  border-left: 4px solid #bb86fc; /* Purple stripe */
+  border-left: 4px solid #bb86fc; 
   animation: fadeIn 0.4s ease;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTask } from './taskSlice';
-import './App.css'; // Don't forget to import the CSS!
+import './App.css'; 
 
 function App() {
   const [input, setInput] = useState('');
