@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTask } from './taskSlice';
+import './App.css'; // Don't forget to import the CSS!
 
 function App() {
+  const [input, setInput] = useState('');
+  const tasks = useSelector((state) => state.tasks);
+  const dispatch = useDispatch();
+
+  const handleAdd = () => {
+    if (input.trim() !== "") {
+      dispatch(addTask(input));
+      setInput('');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>🚀 Task Logger</h1>
+      
+      <div style={{ display: 'flex' }}>
+        <input 
+          value={input} 
+          onChange={(e) => setInput(e.target.value)} 
+          placeholder="New task..."
+        />
+        <button onClick={handleAdd}>Add</button>
+      </div>
+
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </div>
   );
 }

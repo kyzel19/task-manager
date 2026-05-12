@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
-}
+/* src/App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main background - subtle dark theme */
+body {
+  background: #121212;
+  color: #e0e0e0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 50px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* The container "card" */
+.container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #bb86fc; /* Dreamy purple accent */
+  letter-spacing: 1px;
+}
+
+/* Input styling */
+input {
+  width: 70%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px 0 0 8px;
+  background: #252525;
   color: white;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Button styling */
+button {
+  width: 25%;
+  padding: 12px;
+  border: none;
+  background: #03dac6; /* Teal accent */
+  color: #000;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background: #01b0a1;
+}
+
+/* Task list styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+li {
+  background: #2c2c2c;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  border-left: 4px solid #bb86fc; /* Purple stripe */
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
